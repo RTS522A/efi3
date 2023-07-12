@@ -56,7 +56,7 @@ $sampleSet = @{}
 foreach ($file in $solutionFiles) {
     $dir = (Get-Item $file).DirectoryName
     $dir_norm = $dir.Replace($root, '').Trim('\').Replace('\', '.').ToLower()
-    if ($dir_norm -match ($Samples)) {
+    if ($dir_norm -eq "") {
         Write-Verbose "`u{1F50E} Found and included sample [$dir_norm] at $dir"
         $sampleSet[$dir_norm] = $dir
     }
