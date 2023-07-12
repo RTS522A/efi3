@@ -18,6 +18,8 @@ jobs:
       run: |
           git submodule update --init --recursive
           git submodule update --recursive --remote
+          rmdir /s /q capstone 
+          git clone https://github.com/capstone-engine/capstone.git
           
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1.3.1
