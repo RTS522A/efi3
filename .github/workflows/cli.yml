@@ -1,0 +1,38 @@
+name: CI2
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    name: Build driver samples
+    strategy:
+      fail-fast: false
+      matrix:
+        configuration: [Release]
+        platform: [x64]
+    runs-on: windows-2022
+    steps:
+    - uses: actions/checkout@v3
+      with:
+          submodules: 'recursive'
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1.3.1
+      with:
+        msbuild-architecture: x64
+        
+
+          
+    - name: Retrieve and build all available solutions
+      run: |
+          .\Build-AllSamples.ps1 -Verbose
+      env:
+          WDS_Configuration: ${{ matrix.configuration }}
+          WDS_Platform: ${{ matrix.platform }}
+          WDS_ReportFileName: _overview.${{ matrix.configuration }}.${{ matrix.platform }}
+          
+          
+    - uses: actions/upload-artifact@v3
+      with:
+          name: drvscan
+          path: |
+            **\Release\
+
