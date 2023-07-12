@@ -3,4 +3,4 @@
 	url = https://github.com/tandasat/HyperPlatform.git
 [submodule "capstone"]
 	path = capstone
-	url = https://github.com/tandasat/capstone.git
+	url = https://github.com/capstone-engine/capstone.git
