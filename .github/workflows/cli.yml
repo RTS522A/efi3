@@ -32,7 +32,7 @@ jobs:
           
     - uses: actions/upload-artifact@v3
       with:
-          name: drvscan
+          name: DdiMon
           path: |
             **\Release\
 
