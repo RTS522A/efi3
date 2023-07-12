@@ -18,7 +18,7 @@
 #include <vector>
 #include <memory>
 #include <algorithm>
-#include "../capstone/include/capstone/capstone.h"
+#include "../capstone/include/capstone.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 //
