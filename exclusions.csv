@@ -3,3 +3,4 @@ capstone,disable
 HyperPlatform,disable
 capstone\bindings\vb6,disable
 capstone\contrib\cs_driver,disable
+capstone\msvc, disable
