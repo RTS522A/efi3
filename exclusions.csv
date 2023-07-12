@@ -1,3 +1,4 @@
 Path,Reason
 capstone,disable
 HyperPlatform,disable
+capstone\bindings\vb6,disable
