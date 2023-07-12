@@ -20,7 +20,7 @@ jobs:
           git submodule update --recursive --remote
           
     - name: remove capstone
-      run: Remove-Item -Path .\capstone -Force
+      run: Remove-Item -Recurse -Force capstone
     - name: clone new capstone
       run: git clone https://github.com/capstone-engine/capstone.git
           
