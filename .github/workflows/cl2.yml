@@ -7,8 +7,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        configuration: [Release]
-        platform: [x64]
+        configuration: [Debug, Release]
+        platform: [x86, x64]
     runs-on: windows-2022
     steps:
     - uses: actions/checkout@v3
